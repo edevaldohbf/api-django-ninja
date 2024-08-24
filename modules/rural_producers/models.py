@@ -25,5 +25,5 @@ class RuralProducers (models.Model):
     total_farm_area = models.IntegerField(null=False) # in Hectares
     arable_farm_area =  models.IntegerField(null=False) # in Hectares
     vegetation_farm_area =  models.IntegerField(null=False) # in Hectares
-    cultivated_crops = models.ArrayField(models.CharField(max_length=10, null=False, choices=CULTIVATED_CROPS_CHOICES),size=8)
+    cultivated_crops = ArrayField(models.CharField(max_length=10, null=False, choices=CULTIVATED_CROPS_CHOICES),size=8)
     
