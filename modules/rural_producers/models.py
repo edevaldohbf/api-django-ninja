@@ -10,11 +10,11 @@ class RuralProducers (models.Model):
     CDA = 'CDA'
     
     CULTIVATED_CROPS_CHOICES = (
-        ("SOJ", "Soja"),
-        ("MIL", "Milho"),
-        ("ALG", "Algodão"),
-        ("CAF", "Café"),
-        ("CDA", "Cana de Açucar")
+        ('SOJ', 'Soja'),
+        ('MIL', 'Milho'),
+        ('ALG', 'Algodão'),
+        ('CAF', 'Café'),
+        ('CDA', 'Cana de Açucar')
     )
     
     cpf_or_cnpj = models.CharField(null=False)

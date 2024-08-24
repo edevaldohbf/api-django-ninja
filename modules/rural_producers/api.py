@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from ninja import Router
 
-# Create your views here.
+router = Router()
+
+@router.get('')
+def list_rural_producerrs(request):
+    return True
