@@ -1,0 +1,21 @@
+services:
+  database:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: djangoninjadb
+    ports:
+      - '5432:5432'
+
+  # api-django-ninja:
+  #   container_name: api-greenant
+  #   build: .
+  #   ports:
+  #     - '8000:8000'
+  #   depends_on:
+  #     - database
+  #   environment:
+  #     DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/djangoninjadb?schema=public"
