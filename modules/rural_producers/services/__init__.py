@@ -1,0 +1,5 @@
+from .create_rural_producers_service import create_rural_producer_service
+from .get_many_rural_producers_service import get_many_rural_producers_service
+from .get_by_id_rural_producer_service import get_by_id_rural_producer_service
+from .update_rural_producer_service import update_rural_producer_service
+from .delete_rural_producer_service import delete_rural_producer_service
