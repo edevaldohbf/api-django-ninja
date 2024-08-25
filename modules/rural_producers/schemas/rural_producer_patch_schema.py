@@ -7,7 +7,36 @@ class RuralProducerPatchSchema(Schema):
     producer_name: Optional[str] = None
     farm_name: Optional[str] = None
     city: Optional[str] = None
-    state: Optional[str] = None
+    state: Optional[
+        Literal[
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO",
+        ]
+    ] = None
     total_farm_area: Optional[int] = None
     arable_farm_area: Optional[int] = None
     vegetation_farm_area: Optional[int] = None

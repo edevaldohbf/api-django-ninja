@@ -41,7 +41,7 @@ def create_rural_producer(request, payload: RuralProducerCreateSchema):
         return 400, {"message": str(error)}
 
 
-@router.get("", response=list[RuralProducerSchema])
+@router.get("", response={200: list[RuralProducerSchema], 400: ErrorSchema})
 def get_many_rural_producers(request, filters: str = None):
     "This method list rural producers considering the query params inputed"
 
@@ -52,7 +52,9 @@ def get_many_rural_producers(request, filters: str = None):
         return 400, {"message": str(error)}
 
 
-@router.get("{rural_producer_id}", response=RuralProducerSchema)
+@router.get(
+    "{rural_producer_id}", response={200: RuralProducerSchema, 400: ErrorSchema}
+)
 def get_by_id_rural_producer(request, rural_producer_id: int):
     "This method get one rural producer considering the id used on path params"
 
